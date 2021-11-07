@@ -2,16 +2,18 @@
 
 DATE=`date +%y.%m.%d`
 VERSION="v$DATE"
+OWNER=cryptotechguru
 
 sh updateVersion.sh
 
 sh buildVault.sh
-docker tag macterra/metatron-vault macterra/metatron-vault:$VERSION
-docker push macterra/metatron-vault
-docker push macterra/metatron-vault:$VERSION
+docker tag metatron-vault ghcr.io/$OWNER/metatron-vault:latest
+docker push ghcr.io/$OWNER/metatron-vault:latest
+docker tag metatron-vault ghcr.io/$OWNER/metatron-vault:$VERSION
+docker push ghcr.io/$OWNER/metatron-vault:$VERSION
 
 sh buildScanner.sh
-docker tag macterra/metatron-scanner macterra/metatron-scanner:$VERSION
-docker push macterra/metatron-scanner
-docker push macterra/metatron-scanner:$VERSION
-
+docker tag metatron-scanner ghcr.io/$OWNER/metatron-scanner:latest
+docker push ghcr.io/$OWNER/metatron-scanner:latest
+docker tag metatron-scanner ghcr.io/$OWNER/metatron-scanner:$VERSION
+docker push ghcr.io/$OWNER/metatron-scanner:$VERSION
