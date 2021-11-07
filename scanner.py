@@ -34,6 +34,16 @@ class ScannerDb():
     
         self.db = redis.Redis(host=dbhost, port=6379, db=0)
 
+    def dump(self):
+        keys = self.db.keys("*")
+        all = {}
+
+        for key in keys:
+            val = self.db.get(key)
+            all[key.decode()] = val.decode()
+
+        return all
+
     def getStatus(self):
         keys = self.db.keys("scanner/*")
 
