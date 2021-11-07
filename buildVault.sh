@@ -1,2 +1,2 @@
-docker build -f Dockerfile.vault -t macterra/metatron-vault .
+docker build -f Dockerfile.vault -t metatron-vault .
 

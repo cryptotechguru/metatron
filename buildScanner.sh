@@ -1,2 +1,2 @@
-docker build -f Dockerfile.scanner -t macterra/metatron-scanner .
+docker build -f Dockerfile.scanner -t metatron-scanner .
 

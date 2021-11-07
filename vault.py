@@ -35,6 +35,11 @@ def index():
 def about():
     return render_template('about.html', version=version)
 
+@app.route("/dumpdb")
+def dumpdb():
+    db = ScannerDb()
+    return db.dump()
+
 @app.route("/explorer")
 def explorer():
     db = ScannerDb()
