@@ -1,3 +1,0 @@
-. ./connect.sh
-
-python3 authorize.py TSR QmR3A1cFvwQjvfXruZtHUPzn711siXW2Z3ZpSVksGWtG29

@@ -10,3 +10,4 @@ _site/
 venv/
 .vscode/
 .ipynb
+metatron.env
