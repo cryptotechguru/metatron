@@ -1,4 +1,4 @@
-# metatron
+# Metatron
 #### Secure version control for metadata
 
 You can [clone or fork this repository](https://github.com/cryptotechguru/metatron) to get started. 
@@ -20,11 +20,12 @@ ipfs daemon
 
 #### Docker
 
-You will also need to have Docker installed.  You can get more info about installing Docker [here](https://docs.docker.com/install/).  Once it is istalled, you can:
+You will also need to have Docker installed.  You can get more info about installing Docker [here](https://docs.docker.com/install/).  
 
 
 #### ipfshttpclinet
 MetaTron uses the [ipfshttpclient](https://github.com/ipfs-shipyard/py-ipfs-http-client/tree/09cae7672a39ca3ff991684c1b31cfe7875174c3) to interact with IPFS.  Right now you will need to install version 0.7.0 of the library for use with Metatron. 
+
 
 
 ### Start Metatron
