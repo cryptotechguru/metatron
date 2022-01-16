@@ -3,7 +3,7 @@
 
 You can [clone or fork this repository](https://github.com/cryptotechguru/metatron) to get started. 
 
-See the [docs](docs/README.md) for a detailed explination about Metatron.
+See the [docs](docs/README.md) for a detailed explanation about Metatron.
 
 ## Getting started
 
