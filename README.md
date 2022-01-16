@@ -37,9 +37,10 @@ The next step is starting Metatron by running the following command:
 sh run.sh
 ```
 
+When Metatron is running, you can start using it by navigating to http://localhost:5000
 
 
-#### Navigate to http://localhost:5000
+--- 
 
 
 Optionally you run a scanner, e.g.:
