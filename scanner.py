@@ -1,8 +1,5 @@
 
-# pip install bitcoinrpc
-# pip install py-cid
-# pip install redis
-# pip install docker
+# pip install -r requirements.txt
 
 from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
 from datetime import datetime
@@ -89,7 +86,7 @@ class ScannerDb():
         
 class Scanner:
     def __init__(self):
-        self.server = os.environ.get('METATRON_SERVER')
+        self.server = os.environ.get('METATRON_SERVER') or 'localhost'
 
         if not self.server:
             print("missing METATRON_SERVER")
@@ -99,7 +96,7 @@ class Scanner:
             print("can't connect to IPFS")
             return
 
-        self.chain = os.environ.get('SCANNER_CHAIN')
+        self.chain = os.environ.get('SCANNER_CHAIN') or 'BTC'
 
         if not self.chain:
             print("missing SCANNER_CHAIN")
@@ -242,6 +239,10 @@ class Scanner:
             versionCid = versionCid.decode()
         
         versionMeta = xidb.getMeta(versionCid)
+
+        if not versionMeta:
+            print(f"warning: no version found for {xid}")
+            return
         
         if versionMeta['cid'] == newTx.cid:
             print(f"warning: versionCid {versionCid} already assigned to xid {xid}")
@@ -287,6 +288,7 @@ class Scanner:
             print('.', end='', flush=True)
             tx = self.blockchain.getrawtransaction(txid, 1)
             newTx = AuthTx(tx)
+            print(txid, newTx.isValid)
             if newTx.isValid:
                 self.verifyTx(newTx)
         print()

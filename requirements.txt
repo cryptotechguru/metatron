@@ -1,0 +1,8 @@
+ipfshttpclient
+python-bitcoinrpc
+py-cid
+redis
+docker
+flask
+flask_bootstrap
+flask_wtf

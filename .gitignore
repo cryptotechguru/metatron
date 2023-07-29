@@ -11,3 +11,4 @@ venv/
 .vscode/
 .ipynb
 metatron.env
+*.env

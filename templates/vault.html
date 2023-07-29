@@ -24,9 +24,8 @@
 
 <ul class="list-group">
     {% for asset in authorizer.assets %}
-    {% set type = asset.meta.type[asset.meta.type.find("/")+1:] %}
     <li class="list-group-item">
-        <a href="/versions/xid/{{ asset.meta.xid }}">{{ asset.meta.asset }} ({{ type }})</a> 
+        <a href="/versions/xid/{{ asset.meta.xid }}">{{ asset.meta.asset }}</a> 
     </li>
     {% endfor %}
 </ul>

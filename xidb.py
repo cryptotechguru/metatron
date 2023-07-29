@@ -13,9 +13,9 @@ def getIpfs():
     connect = os.environ.get('IPFS_CONNECT')
 
     if connect:
-        return ipfshttpclient.connect(connect)
+        return ipfshttpclient.connect(connect, timeout=6)
     else:
-        return ipfshttpclient.connect()
+        return ipfshttpclient.connect(timeout=6)
 
 
 def checkIpfs():
